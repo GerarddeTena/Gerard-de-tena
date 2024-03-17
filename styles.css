@@ -167,8 +167,16 @@ body {
     font-size: larger;
     display: none;
 }
-
-
+.home {
+    display: flex;
+    justify-content: center;
+}
+.home h1{
+    color: var(--bg-color-white);
+    text-decoration: underline;
+    margin:5% auto;
+    font-size: xxx-large;
+}
 
 .head {
     position: relative;
@@ -182,7 +190,7 @@ body {
 .wrapper {
     display: flex;
     width: 50%;
-    margin:10% auto;
+    margin:5% auto;
 }
 
 .bodypage {
@@ -261,7 +269,7 @@ body {
 .section-title h1{
     color: var(--bg-color-white);
     text-decoration: underline;
-    margin: auto;
+    margin:5% auto;
     font-size: xxx-large;
 }
 .description{
@@ -286,6 +294,7 @@ p{
     margin: 1% 0;
     padding: 2%;
     background: wheat;
+    font-size: x-large;
 }
 .head-2{
     position: relative;
@@ -302,7 +311,14 @@ p{
 .MDN{
     margin: 20% auto
 }
-
+.footer{
+    display: flex;
+    justify-content: space-around;
+    color: var(--bg-color-silver);
+}
+.footer p{
+    font-size: x-small;
+}
 @media(max-width: 700px) {
 
     body,

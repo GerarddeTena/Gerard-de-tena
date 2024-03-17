@@ -11,7 +11,9 @@
 
 <body>
     <header class="header d-flex">
-        <a href="#" class="logo">LOGO</a>
+        <a class="logo">
+            <i class="fa-regular fa-snowflake fa-2xl"></i>
+        </a>
         <button class="open" id="open">
             <i class="fa-solid fa-bars fa-xl"></i>
         </button>
@@ -21,13 +23,14 @@
             </button>
             <ul class="nav-items d-flex">
                 <li class="navitem"><a href="#home" class="nav-menu-link">Home</a></li>
-                <li class="navitem"><a href="" class="nav-menu-link">Blog</a></li>
                 <li class="navitem"><a href="#about" class="nav-menu-link">About</a></li>
                 <li class="navitem"><a href="#contact" class="nav-menu-link">Contact</a></li>
             </ul>
         </nav>
     </header>
-
+    <div class="home">
+        <h1 id="home">HOME</h1>
+    </div>
     <div class="wrapper">
         <div class="head d-flex go-right-animation">
             <div class="bodypage">
@@ -83,10 +86,10 @@
     </div>
     <hr class="short">
     <div class="section-title go-right-animation">
-        <div class="flex-column">
-            <h1>ABOUT</h1>
+        <div class="flex-column scroll-animation">
+            <h1 id="about">ABOUT</h1>
         </div>
-        <div class="icons d-flex">
+        <div class="icons d-flex scroll-animation">
             <i class="fa-solid fa-user-secret fa-2xl"></i>
             <i class="fa-solid fa-user-secret fa-2xl"></i>
             <i class="fa-solid fa-user-secret fa-2xl"></i>
@@ -94,15 +97,17 @@
     </div>
     <div class="txt-align-center description scroll-animation">
         <div style="margin-bottom: 5%;">
-            <h2 id="about">¿Quien soy?</h2>
+            <h2>¿Quien soy?</h2>
         </div>
         <b>Aquí una breve presentación sobre mi trabajo.</b>
         <p>
             Enciclopedia para desarrolladores en proceso, como yo, que busquen un sitio en donde encontrar información
             útil para cumplimentar la formación que estén realizando. <br>
-            <span style="color: rgb(201, 70, 70);">Advierto que esto no es una Bíblia, lo primero es atender, absorver y referenciarse al máximo de los
-            conceptos y herramientas que te ofrezca tu curso.</span> <br>
-            Esto es simplemente una guía donde puedes encontrar recursos para expandir mas allá y hacer tus páginas web un poquito más
+            <span style="color: rgb(201, 70, 70);">Advierto que esto no es una Bíblia, lo primero es atender, absorver y
+                referenciarse al máximo de los
+                conceptos y herramientas que te ofrezca tu curso.</span> <br>
+            Esto es simplemente una guía donde puedes encontrar recursos para expandir mas allá y hacer tus páginas web
+            un poquito más
             molonas.
         </p>
     </div>
@@ -113,7 +118,8 @@
                     <h3>MDN</h3>
                 </div>
                 <div class="txt-align-center">
-                    <p class="spacing-text go-down-animation">Primera página indispensable para una información de calidad.</p>
+                    <p class="spacing-text go-down-animation">Primera página indispensable para una información de
+                        calidad.</p>
                     <div>
                         <img class="MDN image-card"
                             src="https://static-00.iconduck.com/assets.00/mdnwebdocs-icon-512x512-2580irx5.png" alt="">
@@ -122,35 +128,45 @@
             </a>
         </div>
         <div class="bodypage  scroll-animation">
-            <a target="_blank" href="https://try.stackoverflow.co/explore-teams?utm_source=adwords&utm_medium=ppc&utm_campaign=kb_teams_search_brand_emea-dach&_bt=657236278306&_bk=stack+overflow&_bm=p&_bn=g&gad_source=1&gclid=Cj0KCQjwqdqvBhCPARIsANrmZhMqO6KAy8p564baR1P7_RxFNu99WhK7z3aw4-FkxBaYUO-tv9LQcLIaArJrEALw_wcB">
+            <a target="_blank"
+                href="https://try.stackoverflow.co/explore-teams?utm_source=adwords&utm_medium=ppc&utm_campaign=kb_teams_search_brand_emea-dach&_bt=657236278306&_bk=stack+overflow&_bm=p&_bn=g&gad_source=1&gclid=Cj0KCQjwqdqvBhCPARIsANrmZhMqO6KAy8p564baR1P7_RxFNu99WhK7z3aw4-FkxBaYUO-tv9LQcLIaArJrEALw_wcB">
                 <div class="head-card">
                     <h3>Stack OverFlow</h3>
                 </div>
                 <div class="txt-align-center">
-                    <p class="spacing-text go-down-animation">El gran foro de las preguntas. Aquí no hace falta que sintetices mucho tu pregunta, solo escribe y te aseguro que alguien habrá preguntado lo mismo.</p>
+                    <p class="spacing-text go-down-animation">El gran foro de las preguntas. Aquí no hace falta que
+                        sintetices mucho tu pregunta, solo escribe y te aseguro que alguien habrá preguntado lo mismo.
+                    </p>
 
-                    <img class="image-card stckOvflw" src="https://static-00.iconduck.com/assets.00/stack-overflow-icon-512x512-0ivykyeu.png" alt="">
+                    <img class="image-card stckOvflw"
+                        src="https://static-00.iconduck.com/assets.00/stack-overflow-icon-512x512-0ivykyeu.png" alt="">
 
                 </div>
             </a>
         </div>
         <div class="bodypage  scroll-animation">
-            <a target="_blank"
-                href="https://www.cssportal.com">
+            <a target="_blank" href="https://www.cssportal.com">
                 <div class="head-card">
                     <h3>CSS PORTAL</h3>
                 </div>
                 <div class="txt-align-center">
                     <p class="spacing-text go-down-animation">En el siguiente link, existe información acerca de las
-                        Un gran portal al conocimiento y la puesta al día de todas las nuevas funciones y actualizaciones de css.
+                        Un gran portal al conocimiento y la puesta al día de todas las nuevas funciones y
+                        actualizaciones de css.
                         PD: El scroll animado sin JS lo saqué de ahí ;).
                     </p>
                     <img class="image-card cssPortal"
-                        src="https://play-lh.googleusercontent.com/lhSs-1TGTgBNV5-W_qzDKl0CtnmXEjJrOoTINzokJ20IWgxuxMhP8t4O8YnBOJZvAYcq" alt="">
+                        src="https://play-lh.googleusercontent.com/lhSs-1TGTgBNV5-W_qzDKl0CtnmXEjJrOoTINzokJ20IWgxuxMhP8t4O8YnBOJZvAYcq"
+                        alt="">
 
                 </div>
             </a>
         </div>
+    </div>
+    <div class="footer" id="contact">
+        <p>Contact me for purposals.</p>
+        <p>gerarddtm@gmail.com</p>
+        <p>&copy; 2024 Girona</p>
     </div>
 
     <script src="script.js"></script>
