@@ -10,59 +10,92 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header d-flex">
         <a href="#" class="logo">LOGO</a>
         <button class="open" id="open">
             <i class="fa-solid fa-bars fa-xl"></i>
         </button>
-        <nav class="navbar" id="navbar">
+        <nav class="navbar d-flex" id="navbar">
             <button class="close" id="close">
                 <i class="fa-solid fa-square-xmark fa-2xl"></i>
             </button>
-            <ul class="nav-items">
-                <li class="navitem"><a href="" class="nav-menu-link">Home</a></li>
+            <ul class="nav-items d-flex">
+                <li class="navitem"><a href="#home" class="nav-menu-link">Home</a></li>
                 <li class="navitem"><a href="" class="nav-menu-link">Blog</a></li>
-                <li class="navitem"><a href="" class="nav-menu-link">About</a></li>
-                <li class="navitem"><a href="" class="nav-menu-link">Contact</a></li>
+                <li class="navitem"><a href="#about" class="nav-menu-link">About</a></li>
+                <li class="navitem"><a href="#contact" class="nav-menu-link">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <div class="head">
-        <h1>Noticias</h1>
-    </div>
+
     <div class="wrapper">
-        <div class="bodypage">
-            <div class="head-1">
-                <h3>¡¡NEW RELEASE!!</h3>
+        <div class="head d-flex go-right-animation">
+            <div class="bodypage">
+                <a target="_blank" href="https://carontestudio.com/blog/novedades-css-2024/">
+                    <div class="head-card">
+                        <h3>¡¡NEW RELEASE!!</h3>
+                    </div>
+                    <div class="txt-align-center">
+                        <p class="spacing-text go-down-animation">Aquí os dejo un interesante enlace de las nuevas
+                            actualizaciones y
+                            funciones que reciben las funciones de CSS.</p>
+                        <div>
+                            <img class="image-card appear-animation"
+                                src="https://billing.flourisense.in/wp-content/uploads/2022/11/css3.png" alt="">
+                        </div>
+                    </div>
+                </a>
             </div>
-            <div class="body-1">
-                <p>.</p>
-                <img src="" alt="">
-            </div>
-        </div>
-        <div class="bodypage">
-            <div class="head-1">
-                <h3>PROXIMOS EVENTOS</h3>
-            </div>
-            <div class="body-1">
-                <p></p>
-                <img src="" alt="">
-            </div>
+            <div class="bodypage">
+                <a target="_blank" class="appear-animation" target="_blank" href="https://es.javascript.info">
+                    <div class="head-card">
+                        <h3>BÁSICAS DE JS</h3>
+                    </div>
+                    <div class="txt-align-center">
+                        <p class="spacing-text go-down-animation">Este sitio es una maravilla para empezar a ver JS. De
+                            hecho, durante el
+                            preworking, fue la pagina
+                            la cual podria decir que fue mi principal referencia.</p>
 
-        </div>
-        <div class="bodypage">
-            <div class="head-1">
-                <h3>PROXIMOS EVENTOS</h3>
-            </div>
-            <div class="body-1">
-                <p></p>
-                <img src="" alt="">
-            </div>
+                        <img class="image-card" src="https://es.javascript.info/img/site_preview_en_512x512.png" alt="">
 
+                    </div>
+                </a>
+            </div>
+            <div class="bodypage">
+                <a target="_blank" class="appear-animation"
+                    href="https://felixicaza.com/blog/conoce-todas-las-novedades-de-tailwind-css-v3">
+                    <div class="head-card">
+                        <h3>PROXIMOS EVENTOS</h3>
+                    </div>
+                    <div class="txt-align-center">
+                        <p class="spacing-text go-down-animation">En el siguiente link, existe información acerca de las
+                            nuevas funciones de
+                            tailwind.
+                        </p>
+                        <img style="margin-top: 20%;" class="image-card"
+                            src="https://files.raycast.com/nwt9ncojkvwmjfkaada8upafvpnu" alt="">
+
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
-    <div class="wrapper-2">
-        
+    <div class="wrapper2">
+        <div class="section-title go-right-animation d-flex">
+            <h1>ABOUT</h1>
+        </div>
+        <div class="txt-align-center description">
+            <div style="margin-bottom: 5%;">
+                <h2 id="about">¿Quien soy?</h2>
+            </div>
+            <b>Aquí una breve presentación sobre mi trabajo.</b>
+            <br>
+            <p>
+                Me llamo Gerard y soy estudiante de la 4geeks Academy. Nos dijeron de hostear una web con GitHub pages
+                y aqui estoy, realizando el proyecto a la vez que progreso poco a poco.
+            </p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

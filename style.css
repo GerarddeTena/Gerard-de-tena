@@ -1,8 +1,0 @@
-body{
-    margin: 0;
-}
-header{
-    background-color: var(--bg-sand-fade);
-    display: flex;
-    justify-content: space-between;
-}
