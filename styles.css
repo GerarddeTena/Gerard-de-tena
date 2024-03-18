@@ -64,7 +64,7 @@
         el rendimiento se verá afectado.
   */
 }
-
+/*ATOMIC :*/
 .d-flex{
     display: flex;
     flex-direction: row;
@@ -100,8 +100,51 @@
     animation-range: entry 25% cover 50%;
     animation-fill-mode: both;
 }
+/*KEYFRAMES: */
+@keyframes fadeIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0
+    }
 
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
 
+@keyframes fadeDown{
+   from{
+     transform: translateY(-100%);
+     opacity: 0;
+   }
+   to{
+    transform: translateY(0%);
+    opacity: 1;
+   }
+}
+@keyframes appear {
+    from {
+        transform: scale(-1%);
+        opacity: 0;
+    }
+    to{
+        transform: scale(100%);
+        opacity: 1;
+    }
+}
+@keyframes upToDown {
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+/*GENERAL TAGS*/
 a{
     text-decoration: none;
     color: var(--bg-color-black);
@@ -119,11 +162,13 @@ body {
     font-family: var(--font-google-oswald);
 }
 
+/*HOME */
+
 .header {
     background-color: var(--bg-color-gold);
     justify-content: center;
     align-items: center;
-}
+ }
 
 .navbar {
     background: var(--bg-color-gold);
@@ -218,48 +263,7 @@ body {
     width: 100%;
     height:auto;
 }
-@keyframes fadeIn {
-    from {
-        transform: translateX(-100%);
-        opacity: 0
-    }
 
-    to {
-        transform: translateX(0%);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeDown{
-   from{
-     transform: translateY(-100%);
-     opacity: 0;
-   }
-   to{
-    transform: translateY(0%);
-    opacity: 1;
-   }
-}
-@keyframes appear {
-    from {
-        transform: scale(-1%);
-        opacity: 0;
-    }
-    to{
-        transform: scale(100%);
-        opacity: 1;
-    }
-}
-@keyframes upToDown {
-    from{
-        opacity: 0;
-        scale: 25%;
-    }
-    to{
-        opacity: 1;
-        scale: 100%;
-    }
-}
 .section-title{
     justify-content: center;
     align-items: center;
@@ -318,6 +322,32 @@ p{
 }
 .footer p{
     font-size: x-small;
+}
+
+/*BLOG */
+.BLOG{
+    padding: 1%;
+}
+.table{
+    border: solid 1px var(--bg-color-black);
+    background-color: var(--bg-color-silver);
+    display: flex;
+    justify-content: space-around;
+    margin: 10% auto;
+}
+.table ul{
+    list-style: none;
+    border: solid 1px var(--bg-color-black);
+}
+
+.table ul li::before{
+    font-family: "Font Awesome\ 6 Free";
+    content: "\f14a"; 
+    margin: 0 8px;
+    font-size: larger;
+}
+.table thead th{
+    border: solid 1 px var(--bg-color-black);
 }
 @media(max-width: 700px) {
 
