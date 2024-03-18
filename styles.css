@@ -335,6 +335,7 @@ p{
         font-family: var(--font-google-oswald);
         background-color: var(--bg-color-gold);
         height: 100px;
+
     }
 
     .navbar {
@@ -360,7 +361,8 @@ p{
     }
 
     .nav-items {
-
+        display: flex;
+        flex-direction: column;
         align-items: center;
     }
 
@@ -422,7 +424,7 @@ p{
     }
 
 
-    .bodypage .body-1 {
+    .bodypage .body-card p{
         font-size: medium;
     }
 }
