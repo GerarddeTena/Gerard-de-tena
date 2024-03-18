@@ -333,7 +333,7 @@ p{
     background-color: var(--bg-color-silver);
     display: flex;
     justify-content: space-around;
-    margin: 10.1% auto;
+    margin: 10% auto;
 }
 .table ul{
     list-style: none;
