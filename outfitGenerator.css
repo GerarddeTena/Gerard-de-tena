@@ -21,7 +21,7 @@
     --bg-color-navy: #7070ffc9;
     --bg-color-teal: #12ffff98;
     --bg-color-lime: #00ff00;
-    --bg-color-indigo: #4b0082;
+    --bg-color-indigo-pastel: #9403ff;
     --bg-color-olive: #808000;
     --bg-color-aqua: #00ffff;
     --bg-color-salmon: #fa8072;
@@ -64,32 +64,12 @@
         el rendimiento se verá afectado.
   */
 }
-.d-flex{
+
+.d-flex {
     display: flex;
     flex-direction: row;
 }
-.flex-column{
-    display: flex;
-    flex-direction: column;
-}
-.txt-align-center {
-    text-align: center;
-}
-.spacing-text{
-    font-size: large;
-    padding: 3% 0;
-}
-.go-right-animation{
-    animation: fadeIn 1s ease forwards;
-}
-.go-down-animation{
-    animation: fadeDown 1s ease-out forwards;
-}
-.appear-animation{
-
-    animation: appear 1.5s ease-in forwards;
-}
-.scroll-animation{
+.scroll-animation {
     view-timeline-name: --description;
     view-timeline-axis: y;
 
@@ -99,7 +79,8 @@
     animation-range: entry 25% cover 50%;
     animation-fill-mode: both;
 }
-/*KEYFRAMES: */
+
+/* KEYFRAMES: */
 @keyframes fadeIn {
     from {
         transform: translateX(-100%);
@@ -112,46 +93,53 @@
     }
 }
 
-@keyframes fadeDown{
-   from{
-     transform: translateY(-100%);
-     opacity: 0;
-   }
-   to{
-    transform: translateY(0%);
-    opacity: 1;
-   }
+@keyframes fadeDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
+
 @keyframes appear {
     from {
         transform: scale(-1%);
         opacity: 0;
     }
-    to{
+
+    to {
         transform: scale(100%);
         opacity: 1;
     }
 }
+
 @keyframes upToDown {
-    from{
+    from {
         opacity: 0;
         scale: 25%;
     }
-    to{
+
+    to {
         opacity: 1;
         scale: 100%;
     }
 }
-a{
+
+a {
     text-decoration: none;
     color: var(--bg-color-black);
 }
+
 * {
     margin: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     background-color: var(--bg-color-black);
 }
 
@@ -162,7 +150,7 @@ body {
 .header {
     background-color: var(--bg-color-gold);
     width: 100%;
- }
+}
 
 .navbar {
     background: var(--bg-color-gold);
@@ -195,6 +183,7 @@ body {
     color: white;
     border: 1px solid var(--bg-color-white);
 }
+
 .open,
 .close {
     color: white;
@@ -203,23 +192,27 @@ body {
     font-size: larger;
     display: none;
 }
+
 .home {
     display: flex;
     justify-content: center;
 }
-.home h1{
+
+.home h1 {
     color: var(--bg-color-white);
     text-decoration: underline;
-    margin:5% auto;
+    margin: 5% auto;
     font-size: xxx-large;
 }
-.Machine{ 
+
+.Machine {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }
-.headerMachine{ 
+
+.headerMachine {
     display: flex;
     width: 65%;
     margin: auto;
@@ -229,6 +222,7 @@ body {
     justify-content: center;
     border: 1px solid var(--bg-color-white);
 }
+
 .bodyMachine {
     display: flex;
     flex-direction: column;
@@ -237,11 +231,13 @@ body {
     color: var(--bg-color-white);
     margin: 4% 0 0 0;
 }
+
 .bodyMachine span {
     font-size: x-large;
     font-size: x-large;
     margin: 1% 0 5% 0;
 }
+
 .controlsMachine {
     display: flex;
     gap: 1rem;
@@ -249,68 +245,80 @@ body {
     padding: 1rem;
 }
 
-#button1, #button2, #button3, #button4{
+#button1,
+#button2,
+#button3,
+#button4 {
     background: var(--bg-color-gold);
     color: white;
     border: 1px solid white;
     border-radius: 0.5rem;
     padding: 1rem;
     font-size: larger;
-  
-    
+
+
 }
 
 #button1:hover,
 #button2:hover,
 #button3:hover,
 #button4:hover {
+    background: var(--bg-color-indigo-pastel);
     cursor: pointer;
-    transition: 0.5s ease-in-out;
+    transition: 200ms ease-in-out;
     transform: scale(110%);
 }
+
 #button1:active,
 #button2:active,
 #button3:active,
-#button4:active{
-    background: var(--bg-color-gray);
-    transition: 0.25s ease;
+#button4:active {
+    background: var(--bg-color-white);
+    color: var(--bg-color-black);
+    transition: 200ms ease-out;
     transform: scale(100%);
 }
+
 .text {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: x-large;
-    background: #9403ff;
+    background: var(--bg-color-indigo-pastel);
     width: 100%;
     padding: 0 0 13%;
+    animation: appear 500ms forwards;
 
 }
-#textMessageOfTheAction{
+
+#textMessageOfTheAction {
     display: flex;
     flex-direction: column;
     text-align: center;
     margin: 5rem 0 0 0;
 }
+
 @media(max-width: 700px) {
 
-    body,
-    html {
-        margin: 0;
-    }
-
-    body {
-        background-size: 100%;
-        z-index: -1;
-    }
-
     .header {
-        font-family: var(--font-google-oswald);
-        background-color: var(--bg-color-gold);
-        height: 100px;
+        height: 6rem;
+    }
+    .logo{
+        position: absolute;
+        top: 2rem;
+    }  
+    .open {
+        display: block;
+        position: absolute;
+        right: 5%;
+        top: 5%;
+        border-radius: 25%;
 
     }
-
+    .close {
+        color: rgb(0, 0, 0);
+        display: block;
+    }
     .navbar {
         opacity: 0;
         visibility: hidden;
@@ -328,27 +336,21 @@ body {
         opacity: 1;
         z-index: 1;
         visibility: visible;
-        transition-timing-function: ease-in-out;
-        transition-duration: .5s;
-
+        animation: fadeDown 250ms ease-in-out forwards;
     }
 
     .nav-items {
+        right: 1.5rem;
+        position: absolute;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        gap: 2rem;
+        top: 9rem;
     }
 
     .navitem {
         margin-bottom: 2rem;
         align-items: center;
-    }
-
-    .nav-menu-link {
-        text-decoration: none;
-        color: var(--bg-color-black);
-        padding: 15%;
-        border-radius: 10%;
     }
 
     .nav-menu-link:hover {
@@ -358,30 +360,11 @@ body {
         color: var(--bg-color-violet);
     }
 
-    .open {
-        display: block;
-        position: absolute;
-        right: 7%;
-        padding: 2%;
-        border-radius: 25%;
-    }
 
     .open:hover {
         cursor: pointer;
         color: var(--bg-color-black);
         transition: .5s;
-    }
-
-
-    .close {
-        color: rgb(0, 0, 0);
-        background: none;
-        border: none;
-        font-size: larger;
-        display: block;
-        margin-bottom: 3rem;
-        z-index: 1;
-        top: 0.5;
     }
 
     .close:hover {
@@ -391,102 +374,15 @@ body {
 
     }
 
-    .home h1{
-        color: var(--bg-color-white);
-        text-decoration: underline;
-        margin:5% auto;
-        font-size: xxx-large;
-    }
-    .Machine{ 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;  
-    }
-    .headerMachine{ 
-        display: flex;
-        width: 65%;
-        margin: auto;
-        color: var(--bg-color-white);
-        font-size: xx-large;
-        align-content: center;
-        justify-content: center;
-        border: 1px solid var(--bg-color-white);
-    }
-    .bodyMachine {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: var(--bg-color-white);
-        margin: 4% 0 0 0;
-    }
-    .bodyMachine span {
-        font-size: x-large;
-        font-size: x-large;
-        margin: 1% 0 5% 0;
-    }
-    .controlsMachine {
-        display: flex;
-        gap: 1rem;
-        background: var(--bg-color-gold);
-        padding: 1rem;
-    }
-    #button1{
-        border: 1px solid white;
-        color: white;
-        font-size: larger;
-        background: var(--bg-color-gold);
-        border-radius: 0.5rem;
-        padding: 1rem;
-    }
-    #button2 {
-        border: 1px solid white;
-        color: white;
-        font-size: larger;
-        background: var(--bg-color-gold);
-        border-radius: 0.5rem;
-        padding: 1rem;
-    }
-    #button3{
-        border: 1px solid white;
-        color: white;
-        font-size: larger;
-        background: var(--bg-color-gold);
-        border-radius: 0.5rem;
-    }
-    #button4{
-        border: 1px solid white;
-        color: white;
-        font-size: larger;
-        border-radius: 0.5rem;
-        background: var(--bg-color-gold);
-    }
+    @keyframes fadeDown {
+        from {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
     
-    #button1:hover,
-    #button2:hover,
-    #button3:hover,
-    #button4:hover {
-        cursor: pointer;
-        transition: 0.5s ease-in-out;
-        transform: scale(110%);
-    }
-    #button1:active,
-    #button2:active,
-    #button3:active,
-    #button4:active{
-        background: var(--bg-color-gray);
-        transition: 0.25s ease;
-        transform: scale(100%);
-    }
-    .text {
-        background: #9403ff;
-        width: 100%;
-    }
-    #textMessageOfTheAction{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin: 5rem 0 0 0;
+        to {
+            transform: translateY(0%);
+            opacity: 1;
+        }
     }
 }

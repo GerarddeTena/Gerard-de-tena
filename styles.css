@@ -113,16 +113,7 @@
     }
 }
 
-@keyframes fadeDown{
-   from{
-     transform: translateY(-100%);
-     opacity: 0;
-   }
-   to{
-    transform: translateY(0%);
-    opacity: 1;
-   }
-}
+
 @keyframes appear {
     from {
         transform: scale(-1%);
@@ -384,8 +375,7 @@ p{
         opacity: 1;
         z-index: 1;
         visibility: visible;
-        transition-timing-function: ease-in-out;
-        transition-duration: .5s;
+        animation: fadeDown 300ms forwards;
 
     }
 
@@ -456,4 +446,14 @@ p{
     .bodypage .body-card p{
         font-size: medium;
     }
+    @keyframes fadeDown{
+        from{
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        to{
+         transform: translateY(0%);
+         opacity: 1;
+        }
+     }
 }
