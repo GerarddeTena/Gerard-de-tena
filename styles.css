@@ -312,9 +312,6 @@ p{
     border: 1px solid var(--bg-color-black);
     width: 33.3%;
 }
-.MDN{
-    margin: 20% auto
-}
 .footer{
     display: flex;
     justify-content: space-around;
