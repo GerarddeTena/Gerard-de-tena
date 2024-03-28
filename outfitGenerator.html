@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="outfitGenerator.css">
+  <script src="https://kit.fontawesome.com/356f75cd59.js" crossorigin="anonymous"></script>
+  <title>ClothesGenerator v.2.0</title>
+</head>
+
+<body class="Machine">
+  <header class="header d-flex">
+    <a class="logo">
+      <i class="fa-regular fa-snowflake fa-2xl"></i>
+    </a>
+    <button class="open" id="open">
+      <i class="fa-solid fa-bars fa-xl"></i>
+    </button>
+    <nav class="navbar d-flex" id="navbar">
+      <button class="close" id="close">
+        <i class="fa-solid fa-square-xmark fa-2xl"></i>
+      </button>
+      <ul class="nav-items d-flex">
+        <li class="navitem"><a href="index.html" class="nav-menu-link">Home</a></li>
+        <li class="navitem"><a href="blog.html" class="nav-menu-link">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="headerMachine">
+    <h1>FEEL YOUR CLOTHES</h1>
+  </div>
+  <div class="bodyMachine">
+    <span>Welcome! Introduce your mood here.</span>
+    <div class="controlsMachine">
+      <button id="button1">SAD</button>
+      <button id="button2">EXCITED</button>
+      <button id="button3">NOSTALGIC</button>
+      <button id="button4">HAPPY</button>
+      <button id="button5">APATHIC</button>
+    </div>
+    <div class="text appear-animation">
+      Let's see your outfit prototype: <br>
+      <span id="textMessageOfTheAction">
+
+      </span>
+    </div>
+  </div>
+  <script src="./Machine.js"></script>
+</body>
+
+</html>

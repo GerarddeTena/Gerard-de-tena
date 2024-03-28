@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Oswald:wght@400;700&family=Source+Sans+Pro:wght@400;700&family=Raleway:wght@400;700&family=Merriweather:wght@400;700&family=Ubuntu:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+:root {
+    /*BACKGROUNDS SIMPLES*/
+    --bg-color-black: #000000d8;
+    --bg-color-white: #ffffff;
+    --bg-color-gray: #808080;
+    --bg-color-red: #ff0000;
+    --bg-color-green: #00ff00;
+    --bg-color-blue: #0000ff;
+    --bg-color-yellow: #ffff00;
+    --bg-color-orange: #ff7f00;
+    --bg-color-purple: #800080;
+    --bg-color-pink: #ff69b4;
+    --bg-color-brown: #a52a2a;
+    --bg-color-cyan: #00ffff;
+    --bg-color-magenta: #ff00ff;
+    --bg-color-silver: #ededed;
+    --bg-color-gold: #fae256;
+    --bg-color-maroon: #800000;
+    --bg-color-navy: #7070ffc9;
+    --bg-color-teal: #12ffff98;
+    --bg-color-lime: #00ff00;
+    --bg-color-indigo: #4b0082;
+    --bg-color-olive: #808000;
+    --bg-color-aqua: #00ffff;
+    --bg-color-salmon: #fa8072;
+    --bg-color-turquoise: #40e0d0;
+    --bg-color-violet: #8a2be2;
+
+    /*BACKGROUND MOLONES: */
+
+    --bg-mysthic: linear-gradient(0deg, var(--bg-color-indigo), var(--bg-color-magenta));
+    --bg-sea-fade: linear-gradient(0deg, var(--bg-color-blue), var(--bg-color-aqua));
+    --bg-ocean-fade: linear-gradient(0deg, var(--bg-color-teal), var(--bg-color-navy));
+    --bg-sand-fade: linear-gradient(0deg, var(--bg-color-brown), var(--bg-color-orange));
+    --bg-lodus-fade: linear-gradient(0deg, var(--bg-color-brown), var(--bg-color-olive));
+    --bg-blink: linear-gradient(0deg, var(--bg-color-blue), var(--bg-color-magenta));
+
+    /* Fuentes más utilizadas de Google Fonts */
+    --font-google-open-sans: 'Open Sans', sans-serif;
+    --font-google-roboto: 'Roboto', sans-serif;
+    --font-google-montserrat: 'Montserrat', sans-serif;
+    --font-google-lato: 'Lato', sans-serif;
+    --font-google-oswald: 'Oswald', sans-serif;
+    --font-google-source-sans-pro: 'Source Sans Pro', sans-serif;
+    --font-google-raleway: 'Raleway', sans-serif;
+    --font-google-merriweather: 'Merriweather', serif;
+    --font-google-ubuntu: 'Ubuntu', sans-serif;
+    --font-google-poppins: 'Poppins', sans-serif;
+
+    /* Fuentes incluidas por defecto en Visual Studio Code */
+    --font-vsc-consolas: 'Consolas', 'Courier New', monospace;
+    --font-vsc-menlo: 'Menlo', monospace;
+    --font-vsc-monaco: 'Monaco', monospace;
+    --font-vsc-courier-new: 'Courier New', monospace;
+    --font-vsc-lucida-console: 'Lucida Console', monospace;
+    --font-vsc-liberation-mono: 'Liberation Mono', monospace;
+    --font-vsc-dejavu-sans-mono: 'DejaVu Sans Mono', monospace;
+
+    /* **IMPORT GOOGLE FONTS: @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Oswald:wght@400;700&family=Source+Sans+Pro:wght@400;700&family=Raleway:wght@400;700&family=Merriweather:wght@400;700&family=Ubuntu:wght@400;700&family=Poppins:wght@400;700&display=swap');
+    
+     ** Es importante tener en cuenta que este metodo cargará todas las fuentes en el css aunque  no se estés usando, lo que 
+        el rendimiento se verá afectado.
+  */
+}
+.d-flex{
+    display: flex;
+    flex-direction: row;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.txt-align-center {
+    text-align: center;
+}
+.spacing-text{
+    font-size: large;
+    padding: 3% 0;
+}
+.go-right-animation{
+    animation: fadeIn 1s ease forwards;
+}
+.go-down-animation{
+    animation: fadeDown 1s ease-out forwards;
+}
+.appear-animation{
+
+    animation: appear 1.5s ease-in forwards;
+}
+.scroll-animation{
+    view-timeline-name: --description;
+    view-timeline-axis: y;
+
+    animation-timeline: --description;
+    animation-name: upToDown;
+
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+/*KEYFRAMES: */
+@keyframes fadeIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeDown{
+   from{
+     transform: translateY(-100%);
+     opacity: 0;
+   }
+   to{
+    transform: translateY(0%);
+    opacity: 1;
+   }
+}
+@keyframes appear {
+    from {
+        transform: scale(-1%);
+        opacity: 0;
+    }
+    to{
+        transform: scale(100%);
+        opacity: 1;
+    }
+}
+@keyframes upToDown {
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+}
+a{
+    text-decoration: none;
+    color: var(--bg-color-black);
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: var(--bg-color-black);
+}
+
+body {
+    font-family: var(--font-google-oswald);
+}
+
+.header {
+    background-color: var(--bg-color-gold);
+    width: 100%;
+ }
+
+.navbar {
+    background: var(--bg-color-gold);
+    margin: auto;
+}
+
+.logo {
+    position: absolute;
+    font-size: larger;
+    top: 0.8rem;
+    left: 2.8rem;
+}
+
+.navbar .nav-items {
+    padding: 1rem;
+    gap: 2rem;
+    list-style: none;
+    font-size: larger;
+}
+
+.nav-menu-link {
+    text-decoration: none;
+    color: var(--bg-color-black);
+    padding: 25%;
+    border-radius: 10%;
+}
+
+.nav-menu-link:hover {
+    transition: 500ms;
+    color: white;
+    border: 1px solid var(--bg-color-white);
+}
+.open,
+.close {
+    color: white;
+    background: none;
+    border: none;
+    font-size: larger;
+    display: none;
+}
+.home {
+    display: flex;
+    justify-content: center;
+}
+.home h1{
+    color: var(--bg-color-white);
+    text-decoration: underline;
+    margin:5% auto;
+    font-size: xxx-large;
+}
+.Machine{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+.headerMachine{ 
+    display: flex;
+    width: 65%;
+    margin: auto;
+    color: var(--bg-color-white);
+    font-size: xx-large;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid var(--bg-color-white);
+}
+.bodyMachine {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--bg-color-white);
+    margin: 4% 0 0 0;
+}
+.bodyMachine span {
+    font-size: x-large;
+    font-size: x-large;
+    margin: 1% 0 5% 0;
+}
+.controlsMachine {
+    display: flex;
+    gap: 1rem;
+    background: var(--bg-color-gold);
+    padding: 1rem;
+}
+
+#button1, #button2, #button3, #button4{
+    background: var(--bg-color-gold);
+    color: white;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: larger;
+  
+    
+}
+
+#button1:hover,
+#button2:hover,
+#button3:hover,
+#button4:hover {
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: scale(110%);
+}
+#button1:active,
+#button2:active,
+#button3:active,
+#button4:active{
+    background: var(--bg-color-gray);
+    transition: 0.25s ease;
+    transform: scale(100%);
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: x-large;
+    background: #9403ff;
+    width: 100%;
+    padding: 0 0 13%;
+
+}
+#textMessageOfTheAction{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 5rem 0 0 0;
+}
+@media(max-width: 700px) {
+
+    body,
+    html {
+        margin: 0;
+    }
+
+    body {
+        background-size: 100%;
+        z-index: -1;
+    }
+
+    .header {
+        font-family: var(--font-google-oswald);
+        background-color: var(--bg-color-gold);
+        height: 100px;
+
+    }
+
+    .navbar {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--bg-color-silver);
+        bottom: 0;
+        padding: 2rem;
+    }
+
+    .navbar.visible {
+        opacity: 1;
+        z-index: 1;
+        visibility: visible;
+        transition-timing-function: ease-in-out;
+        transition-duration: .5s;
+
+    }
+
+    .nav-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navitem {
+        margin-bottom: 2rem;
+        align-items: center;
+    }
+
+    .nav-menu-link {
+        text-decoration: none;
+        color: var(--bg-color-black);
+        padding: 15%;
+        border-radius: 10%;
+    }
+
+    .nav-menu-link:hover {
+        text-decoration: none;
+        transition: .5s;
+        border: none;
+        color: var(--bg-color-violet);
+    }
+
+    .open {
+        display: block;
+        position: absolute;
+        right: 7%;
+        padding: 2%;
+        border-radius: 25%;
+    }
+
+    .open:hover {
+        cursor: pointer;
+        color: var(--bg-color-black);
+        transition: .5s;
+    }
+
+
+    .close {
+        color: rgb(0, 0, 0);
+        background: none;
+        border: none;
+        font-size: larger;
+        display: block;
+        margin-bottom: 3rem;
+        z-index: 1;
+        top: 0.5;
+    }
+
+    .close:hover {
+        cursor: pointer;
+        color: var(--bg-color-white);
+        transition: .5s;
+
+    }
+
+    .home h1{
+        color: var(--bg-color-white);
+        text-decoration: underline;
+        margin:5% auto;
+        font-size: xxx-large;
+    }
+    .Machine{ 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+    }
+    .headerMachine{ 
+        display: flex;
+        width: 65%;
+        margin: auto;
+        color: var(--bg-color-white);
+        font-size: xx-large;
+        align-content: center;
+        justify-content: center;
+        border: 1px solid var(--bg-color-white);
+    }
+    .bodyMachine {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--bg-color-white);
+        margin: 4% 0 0 0;
+    }
+    .bodyMachine span {
+        font-size: x-large;
+        font-size: x-large;
+        margin: 1% 0 5% 0;
+    }
+    .controlsMachine {
+        display: flex;
+        gap: 1rem;
+        background: var(--bg-color-gold);
+        padding: 1rem;
+    }
+    #button1{
+        border: 1px solid white;
+        color: white;
+        font-size: larger;
+        background: var(--bg-color-gold);
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+    #button2 {
+        border: 1px solid white;
+        color: white;
+        font-size: larger;
+        background: var(--bg-color-gold);
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+    #button3{
+        border: 1px solid white;
+        color: white;
+        font-size: larger;
+        background: var(--bg-color-gold);
+        border-radius: 0.5rem;
+    }
+    #button4{
+        border: 1px solid white;
+        color: white;
+        font-size: larger;
+        border-radius: 0.5rem;
+        background: var(--bg-color-gold);
+    }
+    
+    #button1:hover,
+    #button2:hover,
+    #button3:hover,
+    #button4:hover {
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+        transform: scale(110%);
+    }
+    #button1:active,
+    #button2:active,
+    #button3:active,
+    #button4:active{
+        background: var(--bg-color-gray);
+        transition: 0.25s ease;
+        transform: scale(100%);
+    }
+    .text {
+        background: #9403ff;
+        width: 100%;
+    }
+    #textMessageOfTheAction{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 5rem 0 0 0;
+    }
+}
