@@ -18,13 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // FUNCTIONS:
 
   const getTheFeel = (feel) => {return feelings.find(item => item.name === feel);}
-  
+   const feeling = getTheFeel(feel);
   // INIZIALIZE BUTTONS:
 
 
   button1.addEventListener("click", () => {
     const getFeelCombination = (feel) => {
-      const feeling = getTheFeel(feel);
       return `${feeling.clothes.map((item, index) => `${item} - ${feeling.color[index]}`).join(' / ')}`;
     }
      text.innerText =  `${getFeelCombination("sad")}`;
@@ -33,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
   button2.addEventListener("click", () => {
 
     const getFeelCombination = (feel) => {
-      const feeling = getTheFeel(feel);
       return `${feeling.clothes.map((item, index) => `${item} - ${feeling.color[index]}`).join(' / ')}`;
     }
      text.innerText = `${getFeelCombination("excited")}`;
@@ -42,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
   button3.addEventListener("click", () => {
 
     const getFeelCombination = (feel) => {
-      const feeling = getTheFeel(feel);
       return `${feeling.clothes.map((item, index) => `${item} - ${feeling.color[index]}`).join(' / ')}`;
     }
      text.innerText = `${getFeelCombination("nostalgic")}`;
@@ -51,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
   button4.addEventListener("click", () => {
 
     const getFeelCombination = (feel) => {
-      const feeling = getTheFeel(feel);
       return `${feeling.clothes.map((item, index) => `${item} - ${feeling.color[index]}`).join(' / ')}`;
     }
      text.innerText = `${getFeelCombination("happy")}`;
@@ -60,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
   button5.addEventListener("click", () => {
 
     const getFeelCombination = (feel) => {
-      const feeling = getTheFeel(feel);
       return `${feeling.clothes.map((item, index) => `${item} - ${feeling.color[index]}`).join(' / ')}`;
     }
      text.innerText = `${getFeelCombination("apathic")}`
