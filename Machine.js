@@ -17,15 +17,31 @@ document.addEventListener("DOMContentLoaded", () => {
   const button5 = document.getElementById("button5");
 
 
-  // FUNCTIONS:
+// FUNCTIONS:
+
+ //********** FIND THE FEELING ************
 
   const getTheFeel = (feel) => { return feelings.find(item => item.name === feel); }
 
-  // INIZIALIZE BUTTONS:
+ //*********** COMBINE THE OUTFIT IN ORDER OF CLOTHE - COLOR ************ 
+
+  const getFeelCombination = (feel) => {
+    const feeling = getTheFeel(feel);
+    return `${feeling.clothes.map((item, index) => `${item} - ${feeling.color[index]}`).join(' / ')}`;
+  }
+
+ //************ WRAP THE COMBINATION FUNCTION TO APPLY DRY AND MAKE THIS CODE MORE LEGITIBLE AND MAINTAINBLE ***********  
+
+  const outfit = (feel) => getFeelCombination(feel);
+
+  //__________________________________________________________________________________________________________________________
+
+  
+// INIZIALIZE BUTTONS:
 
 
-  //NAVBAR:
-
+ //************* EVENT TO SHOW/HIDE THE NAVBAR TO MAKE MORE RESPOSIVE THE WEB DESIGN:
+ 
   open.addEventListener("click", () => {
     nav.classList.add("visible");
   });
@@ -34,50 +50,18 @@ document.addEventListener("DOMContentLoaded", () => {
     nav.classList.remove("visible");
   });
 
- //MACHINE BUTTONS:
 
-  button1.addEventListener("click", () => {
-    const getFeelCombination = (feel) => {
-      const feeling = getTheFeel(feel);
-      return `${feeling.clothes.map((item, index) => `${item} - ${feeling.color[index]}`).join(' / ')}`;
-    }
-    text.innerText = `${getFeelCombination("sad")}`;
-  });
+ // ************* EVENT TRIGGERED TO DISPLAY THE OUTFIT ACCORDING TO THE MOOD SELECTED *****************
+  
+  button1.addEventListener("click", () => {text.innerText = `${outfit("sad")}`});
 
-  button2.addEventListener("click", () => {
+  button2.addEventListener("click", () => {text.innerText = `${outfit("excited")}`});
 
-    const getFeelCombination = (feel) => {
-      const feeling = getTheFeel(feel);
-      return `${feeling.clothes.map((item, index) => `${item} - ${feeling.color[index]}`).join(' / ')}`;
-    }
-    text.innerText = `${getFeelCombination("excited")}`;
-  });
+  button3.addEventListener("click", () => {text.innerText = `${outfit("nostalgic")}`});
 
-  button3.addEventListener("click", () => {
+  button4.addEventListener("click", () => {text.innerText = `${getFeelCombination("happy")}`});
 
-    const getFeelCombination = (feel) => {
-      const feeling = getTheFeel(feel);
-      return `${feeling.clothes.map((item, index) => `${item} - ${feeling.color[index]}`).join(' / ')}`;
-    }
-    text.innerText = `${getFeelCombination("nostalgic")}`;
-  });
-
-  button4.addEventListener("click", () => {
-
-    const getFeelCombination = (feel) => {
-      const feeling = getTheFeel(feel);
-      return `${feeling.clothes.map((item, index) => `${item} - ${feeling.color[index]}`).join(' / ')}`;
-    }
-    text.innerText = `${getFeelCombination("happy")}`;
-  });
-
-  button5.addEventListener("click", () => {
-
-    const getFeelCombination = (feel) => {
-      const feeling = getTheFeel(feel);
-      return `${feeling.clothes.map((item, index) => `${item} - ${feeling.color[index]}`).join(' / ')}`;
-    }
-    text.innerText = `${getFeelCombination("apathic")}`
-  });
+  button5.addEventListener("click", () => {text.innerText = `${getFeelCombination("apathic")}`});
 
 });
+ //____________________________________________________________________________________________________________________________
