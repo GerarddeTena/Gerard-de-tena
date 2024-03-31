@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="outfitGenerator.css">
+  <link rel="stylesheet" href="OutfitGenerator.css">
   <script src="https://kit.fontawesome.com/356f75cd59.js" crossorigin="anonymous"></script>
   <title>ClothesGenerator v.2.0</title>
 </head>
@@ -32,22 +32,32 @@
     <h1>FEEL YOUR CLOTHES</h1>
   </div>
   <div class="bodyMachine">
-    <span>Welcome! Introduce your mood here.</span>
+    <span>
+    Outfit Generator:
+    </span>
+    <span>
+      
+Outfit Generator:
+The following generator is going to help you choose all kinds of clothing depending on<br> 
+your mood. This version is a beta version that will only give you some ideas so you can have <br>
+a general idea of what might best suit you, depending on what your heart desires.<br>
+In the coming days, we will be working on it as we believe this idea has a lot of potential and,<br>
+with a wide and varied catalog, we hope to please many people.
+    </span>
     <div class="controlsMachine">
-      <button id="button1">SAD</button>
-      <button id="button2">EXCITED</button>
-      <button id="button3">NOSTALGIC</button>
-      <button id="button4">HAPPY</button>
-      <button id="button5">APATHIC</button>
+      <button id="button1">😔</button>
+      <button id="button2">🤩</button>
+      <button id="button3">😮‍💨</button>
+      <button id="button4">🤗</button>
+      <button id="button5">😑</button>
     </div>
-    <div class="text appear-animation">
+    <div id="textBox" class="appear-animation">
       Let's see your outfit prototype: <br>
       <span id="textMessageOfTheAction">
 
       </span>
     </div>
   </div>
-  <script src="./Machine.js"></script>
+  <script src="OutfitGenerator.js"></script>
 </body>
-
 </html>
