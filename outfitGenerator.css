@@ -187,9 +187,12 @@ body {
 
 .logo {
     position: absolute;
-    font-size: larger;
-    top: 0.8rem;
-    left: 2.8rem;
+left: 2rem;
+top: 0.8rem;
+text-decoration: none;
+color: black;
+font-size: larger;
+
 }
 
 .navbar .nav-items {
@@ -369,6 +372,7 @@ body {
         font-family: var(--font-google-oswald);
         background-color: var(--bg-color-gold);
         height: 100px;
+        align-items: center;
 
     }
 
@@ -389,8 +393,7 @@ body {
         opacity: 1;
         z-index: 1;
         visibility: visible;
-        transition-timing-function: ease-in-out;
-        transition-duration: .5s;
+        animation: fadeDown 300ms forwards;
 
     }
 
@@ -450,6 +453,14 @@ body {
         color: var(--bg-color-white);
         transition: .5s;
 
+    }
+    
+    .logo {
+        position: absolute;
+        left: 2rem;
+        top: 2rem;
+        color: black;
+        font-size: larger;
     }
 
     .home h1 {
@@ -559,7 +570,7 @@ body {
     #textMessageOfTheAction {
         margin: 5rem 0 0 0;
     }
-}
+
     #button1:hover,
     #button2:hover,
     #button3:hover,
