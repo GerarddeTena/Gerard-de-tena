@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Oswald:wght@400;700&family=Source+Sans+Pro:wght@400;700&family=Raleway:wght@400;700&family=Merriweather:wght@400;700&family=Ubuntu:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+:root {
+    /*BACKGROUNDS SIMPLES*/
+    --bg-color-black: #000000d8;
+    --bg-color-white: #ffffff;
+    --bg-color-gray: #808080;
+    --bg-color-red: #ff0000;
+    --bg-color-green: #00ff00;
+    --bg-color-blue: #0000ff;
+    --bg-color-yellow: #ffff00;
+    --bg-color-orange: #ff7f00;
+    --bg-color-purple: #800080;
+    --bg-color-pink: #ff69b4;
+    --bg-color-brown: #a52a2a;
+    --bg-color-cyan: #00ffff;
+    --bg-color-magenta: #ff00ff;
+    --bg-color-silver: #ededed;
+    --bg-color-gold: #fae256;
+    --bg-color-maroon: #800000;
+    --bg-color-navy: #7070ffc9;
+    --bg-color-teal: #12ffff98;
+    --bg-color-lime: #00ff00;
+    --bg-color-indigo: #4b0082;
+    --bg-color-olive: #808000;
+    --bg-color-aqua: #00ffff;
+    --bg-color-salmon: #fa8072;
+    --bg-color-turquoise: #40e0d0;
+    --bg-color-violet: #8a2be2;
+
+    /*BACKGROUND MOLONES: */
+
+    --bg-mysthic: linear-gradient(0deg, var(--bg-color-indigo), var(--bg-color-magenta));
+    --bg-sea-fade: linear-gradient(0deg, var(--bg-color-blue), var(--bg-color-aqua));
+    --bg-ocean-fade: linear-gradient(0deg, var(--bg-color-teal), var(--bg-color-navy));
+    --bg-sand-fade: linear-gradient(0deg, var(--bg-color-brown), var(--bg-color-orange));
+    --bg-lodus-fade: linear-gradient(0deg, var(--bg-color-brown), var(--bg-color-olive));
+    --bg-blink: linear-gradient(0deg, var(--bg-color-blue), var(--bg-color-magenta));
+
+    /* Fuentes más utilizadas de Google Fonts */
+    --font-google-open-sans: 'Open Sans', sans-serif;
+    --font-google-roboto: 'Roboto', sans-serif;
+    --font-google-montserrat: 'Montserrat', sans-serif;
+    --font-google-lato: 'Lato', sans-serif;
+    --font-google-oswald: 'Oswald', sans-serif;
+    --font-google-source-sans-pro: 'Source Sans Pro', sans-serif;
+    --font-google-raleway: 'Raleway', sans-serif;
+    --font-google-merriweather: 'Merriweather', serif;
+    --font-google-ubuntu: 'Ubuntu', sans-serif;
+    --font-google-poppins: 'Poppins', sans-serif;
+
+    /* Fuentes incluidas por defecto en Visual Studio Code */
+    --font-vsc-consolas: 'Consolas', 'Courier New', monospace;
+    --font-vsc-menlo: 'Menlo', monospace;
+    --font-vsc-monaco: 'Monaco', monospace;
+    --font-vsc-courier-new: 'Courier New', monospace;
+    --font-vsc-lucida-console: 'Lucida Console', monospace;
+    --font-vsc-liberation-mono: 'Liberation Mono', monospace;
+    --font-vsc-dejavu-sans-mono: 'DejaVu Sans Mono', monospace;
+
+    /* **IMPORT GOOGLE FONTS: @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Oswald:wght@400;700&family=Source+Sans+Pro:wght@400;700&family=Raleway:wght@400;700&family=Merriweather:wght@400;700&family=Ubuntu:wght@400;700&family=Poppins:wght@400;700&display=swap');
+    
+     ** Es importante tener en cuenta que este metodo cargará todas las fuentes en el css aunque  no se estés usando, lo que 
+        el rendimiento se verá afectado.
+  */
+}
+
+/*ATOMIC :*/
+.d-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.txt-align-center {
+    text-align: center;
+}
+
+.spacing-text {
+    font-size: large;
+    padding: 3% 0;
+}
+
+.go-right-animation {
+    animation: fadeIn 1s ease forwards;
+}
+
+.go-down-animation {
+    animation: fadeDown 1s ease-out forwards;
+}
+
+.appear-animation {
+
+    animation: appear 1.5s ease-in forwards;
+}
+
+.scroll-animation {
+    view-timeline-name: --description;
+    view-timeline-axis: y;
+
+    animation-timeline: --description;
+    animation-name: upToDown;
+
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+/*KEYFRAMES: */
+@keyframes fadeIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+
+@keyframes appear {
+    from {
+        transform: scale(-1%);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(100%);
+        opacity: 1;
+    }
+}
+
+@keyframes upToDown {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+/*GENERAL TAGS*/
+a {
+    text-decoration: none;
+    color: var(--bg-color-black);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--bg-color-black);
+}
+
+body {
+    font-family: var(--font-google-oswald);
+}
+
+/*HOME */
+
+.header {
+    background-color: var(--bg-color-gold);
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    background: var(--bg-color-gold);
+    margin: auto;
+}
+
+.logo {
+    position: absolute;
+left: 2rem;
+top: 0.8rem;
+text-decoration: none;
+color: black;
+font-size: larger;
+
+}
+
+.navbar .nav-items {
+    padding: 1rem;
+    gap: 2rem;
+    list-style: none;
+    font-size: larger;
+}
+
+.nav-menu-link {
+    text-decoration: none;
+    color: var(--bg-color-black);
+    padding: 25%;
+    border-radius: 10%;
+}
+
+.nav-menu-link:hover {
+    transition: 500ms;
+    color: white;
+    border: 1px solid var(--bg-color-white);
+}
+
+.open,
+.close {
+    color: white;
+    background: none;
+    border: none;
+    font-size: larger;
+    display: none;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+}
+
+.home h1 {
+    color: var(--bg-color-white);
+    text-decoration: underline;
+    margin: 5% auto;
+    font-size: xxx-large;
+}
+
+.head {
+    position: relative;
+    justify-content: center;
+    margin: 5% 0;
+    width: 100%;
+    opacity: 1;
+    border: 1px solid var(--bg-color-black);
+}
+
+.wrapper {
+    display: flex;
+    width: 50%;
+    margin: 5% auto;
+}
+
+.bodypage {
+    background-color: var(--bg-color-silver);
+    border: 1px solid var(--bg-color-black);
+    width: 33.3%;
+}
+
+.bodypage:hover {
+    transform: scale(110%);
+    transition: .5s ease;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.head-card {
+    border: solid 1px var(--bg-color-black);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: var(--bg-color-black);
+    background-color: rgba(255, 255, 255, 0.418);
+}
+
+.image-card {
+    padding: 2%;
+    width: 100%;
+    height: auto;
+}
+
+.section-title {
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2% 0;
+}
+
+.section-title h1 {
+    color: var(--bg-color-white);
+    text-decoration: underline;
+    margin: 5% auto;
+    font-size: xxx-large;
+}
+
+.description {
+    color: var(--bg-color-white);
+    width: 75%;
+    margin: auto;
+    padding: 5% 5%;
+}
+
+.description b,
+p {
+    font-size: xx-large;
+}
+
+.short {
+    clear: both;
+    width: 50%;
+    margin: auto;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1% 0;
+    padding: 2%;
+    background: wheat;
+    font-size: x-large;
+}
+
+.head-2 {
+    position: relative;
+    justify-content: center;
+    margin: 5% auto;
+    width: 65%;
+    opacity: 1;
+}
+
+.bodypage-2 {
+    background-color: var(--bg-color-silver);
+    border: 1px solid var(--bg-color-black);
+    width: 33.3%;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    color: var(--bg-color-silver);
+}
+
+.footer p {
+    font-size: x-small;
+}
+
+/*  BLOG: */
+.BLOG {
+    padding: 1%;
+}
+
+.table {
+    border: solid 1px var(--bg-color-black);
+    background-color: var(--bg-color-silver);
+    display: flex;
+    justify-content: space-around;
+    margin: 10% auto;
+}
+
+.table ul {
+    list-style: none;
+    border: solid 1px var(--bg-color-black);
+}
+
+.table ul li::before {
+    font-family: "Font Awesome\ 6 Free";
+    content: "\f14a";
+    margin: 0 8px;
+    font-size: larger;
+}
+
+.table thead th {
+    border: solid 1 px var(--bg-color-black);
+}
+
+
+@media(max-width: 700px) {
+
+    body,
+    html {
+        margin: 0;
+    }
+
+    body {
+        background-size: 100%;
+        z-index: -1;
+    }
+
+    .header {
+        font-family: var(--font-google-oswald);
+        background-color: var(--bg-color-gold);
+        height: 100px;
+
+    }
+
+    .navbar {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--bg-color-silver);
+        bottom: 0;
+        padding: 2rem;
+    }
+
+    .navbar.visible {
+        opacity: 1;
+        z-index: 1;
+        visibility: visible;
+        animation: fadeDown 300ms forwards;
+
+    }
+
+    .nav-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navitem {
+        margin-bottom: 2rem;
+        align-items: center;
+    }
+
+    .nav-menu-link {
+        text-decoration: none;
+        color: var(--bg-color-black);
+        padding: 15%;
+        border-radius: 10%;
+    }
+
+    .nav-menu-link:hover {
+        text-decoration: none;
+        transition: .5s;
+        border: none;
+        color: var(--bg-color-violet);
+    }
+
+    .open {
+        display: block;
+        position: absolute;
+        right: 7%;
+        padding: 2%;
+        border-radius: 25%;
+    }
+
+    .open:hover {
+        cursor: pointer;
+        color: var(--bg-color-black);
+        transition: .5s;
+    }
+
+
+    .close {
+        color: rgb(0, 0, 0);
+        background: none;
+        border: none;
+        font-size: larger;
+        display: block;
+        margin-bottom: 3rem;
+        z-index: 1;
+        top: 0.5;
+    }
+
+    .close:hover {
+        cursor: pointer;
+        color: var(--bg-color-white);
+        transition: .5s;
+
+    }
+
+    .logo {
+        position: absolute;
+        left: 2rem;
+        top: 2rem;
+        color: black;
+        font-size: larger;
+    }
+
+    .head {
+        display: flex;
+        z-index: 0;
+    }
+
+
+    .bodypage .body-card p {
+        font-size: medium;
+    }
+
+    @keyframes fadeDown {
+        from {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
+}
